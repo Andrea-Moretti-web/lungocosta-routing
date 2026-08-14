@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lungocosta-routing
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+    healthCheckPath: /otp/gtfs/v1
